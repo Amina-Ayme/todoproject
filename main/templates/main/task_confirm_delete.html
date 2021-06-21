@@ -1,0 +1,17 @@
+{% extends 'main/base.html' %}
+{% block content %}
+
+<div class="header-bar">
+    <a href="{% url 'maintask' %}">&#8592; Back</a>
+</div>
+
+<div class="card-body">
+    <form method="POST">
+        {% csrf_token %}
+        <p>Are you sure, you want to delete {{object_list_2}}?</p>
+        <input class="button" type="submit" value="delete">
+    </form>
+
+</div>
+
+{% endblock content %}
